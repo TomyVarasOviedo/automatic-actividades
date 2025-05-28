@@ -92,9 +92,7 @@ def scrapper_worker():
 #scraper_thread = threading.Thread(target=scrapper_worker)
 #scraper_thread.daemon = True
 #scraper_thread.start()
-actividades_thread = threading.Thread(target=actividades_extracuriculares)
-actividades_thread.daemon = True
-actividades_thread.start()
+
 
 #ENDPOINTS
 @app.get("/status")
@@ -134,5 +132,7 @@ def verCSVEstadisticas():
     return json.dumps(data)
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)    
+    actividades_thread = threading.Thread(target=actividades_extracuriculares)
+    actividades_thread.daemon = True
+    actividades_thread.start() 
 
