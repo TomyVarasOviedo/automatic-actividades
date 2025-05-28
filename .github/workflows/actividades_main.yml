@@ -1,6 +1,9 @@
 name: Actividades Extracurriculares 
 run-name: ${{github.actor}} - Actividades
-on: [push]
+on:
+  schedule:
+    - cron: '0 */4 * * *'
+
 jobs:
   actividades:
     runs-on: ubuntu-latest
