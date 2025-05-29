@@ -2,7 +2,7 @@ name: Actividades Extracurriculares
 run-name: ${{github.actor}} - Actividades
 on:
   schedule:
-    - cron: '0 */4 * * *'
+    - cron: '0 9 * * 3,5'
 
 jobs:
   actividades:
@@ -23,7 +23,3 @@ jobs:
 
       - name: Run script
         run: python main.py
-
-      - name: wait
-        run: sleep 2m
-        shell: bash
