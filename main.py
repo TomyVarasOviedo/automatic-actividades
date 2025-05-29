@@ -132,7 +132,5 @@ def verCSVEstadisticas():
     return json.dumps(data)
 
 if __name__ == "__main__":
-    actividades_thread = threading.Thread(target=actividades_extracuriculares)
-    actividades_thread.daemon = True
-    actividades_thread.start() 
+    actividades_extracuriculares()
 
