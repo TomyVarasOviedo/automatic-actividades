@@ -21,11 +21,11 @@ class Mail():
     :param asunto -> String
     :param destinatario -> String
     """
-    def __init__(self, asunto:str, destinatario:str):
+    def __init__(self, asunto:str, destinatario):
         self.asunto = asunto
         self.destinatario = destinatario
 
-    def set_params(self,mensaje:str,asunto:str,destinatario:str):
+    def set_params(self,mensaje:str,asunto:str,destinatario):
         """
         Metodo para actualizar los parametros de la Clase
         :param asunto -> String

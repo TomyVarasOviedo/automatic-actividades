@@ -22,7 +22,7 @@ data = {
 data_lock = threading.Lock()
 
 def actividades_extracuriculares():
-    mail = Mail("Actividades Extracuriculares de la semana", "tomas.varas@comunidad.ub.edu.ar")
+    mail = Mail("Actividades Extracuriculares de la semana", ["tomas.varas@comunidad.ub.edu.ar", "diego.escorche@comunidad.ub.edu.ar", "audrey.barrientos@comunidad.ub.edu.ar"])
     #while True:
     with data_lock:
         if not data["running"]:
